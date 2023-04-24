@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/food.css">
+    <!-- <link rel="stylesheet" href="css/food.css">/ -->
+    <!-- <link rel="stylesheet" href="css/food.css"> -->
+    <title>FOOD ORDERING</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://kit.fontawesome.com/1ac8a41a1a.css" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/1ac8a41a1a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  
+    <input type="checkbox" id="cart">
+    <!-- <label for="cart" class="label-cart"><i class="fa-solid fa-cart-shopping"></i></label> -->
+    <div class="logo">
+      <h3 class="firsttext">Food Ordering</h3>
+      <div class="cart-sect">
+        <a href="./demo1.html" id="cart-logo" class="fa-solid fa-cart-shopping"></a>
+        <a href="./demo1.html"id="cartbtn">AddCart<span id="c" >0</span></a>
+      </div>
+    </div>
+    <div class="menu">
+        <div class="sidebar-menu">
+            <i class="fa-solid fa-magnifying-glass search-icon" onclick="toggleSearchBar()"></i>
+            <a href="#">Search</a>
+            <input type="text" id="search-bar" onkeyup="searchItems()" class="search-bar" placeholder="Search...">
+        </div> 
+        <div id="search-results"></div>
+        <div class="sidebar-menu">
+            <i class="fa-solid fa-house"></i>
+            <a href="#">Home</a>
+        </div>
+        <!-- <div class="sidebar-menu">
+            <i class="fa-regular fa-heart"></i>
+            <a href="#">Favs</a>
+        </div>
+        <div class="sidebar-menu">
+            <i class="fa-solid fa-user"></i>
+            <a href="#">Profile</a>
+        </div>
+        <div class="sidebar-menu">
+            <i class="fa-solid fa-sliders"></i>
+            <a href="#">Settings</a> -->
+        </div>
+    </div>
+
+    <!--main dashboard-->
+    <div class="dashboard">
+        <h1 class="quote-txt">Eat well <span class="feel">feel well</span> live well</h1>
+        <img class="dashimg" src="../assets/photo-1515003197210-e0cd71810b5f.jpg">
+    </div>
+    <div class="container cardcontainer mt-5">
+      <!-- <div class="row">
+        <div class="col-md-6">
+          <input type="text" id="search-input" onkeyup="searchItems()" placeholder="Search for an item...">
+        </div>
+      </div> -->
+        <div class="row">
+          <div class="col-md-2 ms-3">
+            <div class="card ">
+              <img class="card-img-top" src="../assets/biriyani.jpg" alt="Food 1" style="height: 200px;">
+              <div class="card-body">
+                <h5 class="card-title">Biriyani</h5>
+                <p class="card-text">&#8377 55</p>
+                <button type="submit" onclick="addToCart(item1)" class="btn btn-primary" id="Biriyani">Add To Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 ms-5">
+            <div class="card">
+              <img class="card-img-top" src="../assets/fried rice.jpeg" alt="Food 2" style="height: 200px;">
+              <div class="card-body ">
+                <h5 class="card-title">Fried rice</h5>
+                <p class="card-text">&#8377 50</p>
+                <button type="submit" onclick="addToCart(item2)" class="btn btn-primary" id="Fried-rice">Add To Cart</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 ms-5">
+            <div class="card">
+              <img class="card-img-top" src="../assets/noodles.jpg" alt="Food 3" style="height: 200px;">
+              <div class="card-body ">
+                <h5 class="card-title">Noodles</h5>
+                <p class="card-text">&#8377 50</p>
+                <button type="submit" onclick="addToCart(item3)" class="btn btn-primary" id="Noodles">Add To Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 ms-5">
+            <div class="card">
+              <img class="card-img-top" src="../assets/chilli-chicken.jpg" alt="Food 4" style="height: 200px;">
+              <div class="card-body">
+                <h5 class="card-title">Chilli chicken</h5>
+                <p class="card-text">&#8377 70</p>
+                <button type="submit" onclick="addToCart(item4)" class="btn btn-primary" id="chilli-chicken">Add To Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 ms-5">
+            <div class="card">
+              <img class="card-img-top" src="../assets/pexels-photo-1438672.jpeg" alt="Food 5" style="height: 200px;">
+              <div class="card-body ">
+                <h5 class="card-title">Pasta</h5>
+                <p class="card-text">&#8377 60</p>
+                <button  type="submit" onclick="addToCart(item5)" class="btn btn-primary" id="pasta">Add To Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <!-- <h2>Cart</h2> -->
+        <div id="cart-display"></div>
+        <div id="total-display"></div>
+      </div>
+
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-md-2 ms-3">
+            <div class="card ">
+              <img class="card-img-top" src="../assets/meals1.jpg" alt="Food 6" style="height: 200px;">
+              <div class="card-body">
+                <h5 class="card-title">Meals</h5>
+                <p class="card-text">&#8377 45</p>
+                <button  type="submit" onclick="addToCart(item6)" class="btn btn-primary" id="Meals">Add To Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 ms-5">
+            <div class="card">
+              <img class="card-img-top" src="../assets/chicken-fried-rice.jpg" alt="Food 7" style="height: 200px;">
+              <div class="card-body ">
+                <h5 class="card-title">Chicken Fried rice</h5>
+                <p class="card-text">&#8377 60</p>
+                <button  type="submit" onclick="addToCart(item7)" class="btn btn-primary" id="Chicken-Fried-rice">Add To Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 ms-5">
+            <div class="card">
+              <img class="card-img-top" src="../assets/chicken noodles1.jpg" alt="Food 8" style="height: 200px;">
+              <div class="card-body ">
+                <h5 class="card-title">Chicken Noodles</h5>
+                <p class="card-text">&#8377 60</p>
+                <button  type="submit" onclick="addToCart(item8)" class="btn btn-primary" id="Chicken-Noodles">Add To Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 ms-5">
+            <div class="card">
+              <img class="card-img-top" src="../assets/chicken-gravy.jpg" alt="Food 9" style="height: 200px;">
+              <div class="card-body">
+                <h5 class="card-title">Chicken Gravy</h5>
+                <p class="card-text">&#8377 70</p>
+                <button  type="submit" onclick="addToCart(item9)" class="btn btn-primary" id="Chicken-Noodles">Add To Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 ms-5">
+            <div class="card">
+              <img class="card-img-top" src="../assets/Coconut Rice.jpg" alt="Food 10" style="height: 200px;">
+              <div class="card-body ">
+                <h5 class="card-title">Coconut Rice</h5>
+                <p class="card-text">&#8377 40</p>
+                <button  type="submit" onclick="addToCart(item10)" class="btn btn-primary" id="Chicken-Noodles">Add To Cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+      <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+    <script src="./firebase.js">
+    //   // Your web app's Firebase configuration
+    //   const firebaseConfig = {
+    //   apiKey: "AIzaSyAYDB9l-uuuIFDItv0UXe-F1TJrlEj1OUI",
+    //   authDomain: "foodordering-41768.firebaseapp.com",
+    //   databaseURL: "https://foodordering-41768-default-rtdb.asia-southeast1.firebasedatabase.app",
+    //   projectId: "foodordering-41768",
+    //   storageBucket: "foodordering-41768.appspot.com",
+    //   messagingSenderId: "813600747716",
+    //   appId: "1:813600747716:web:7c79cd8bd346d60e3e5991"
+    // };
+
+    //   // Initialize Firebase
+    //   firebase.initializeApp(firebaseConfig);
+      </script>
+      <script src="./food.js"></script>
+      <!-- <script src="../firebase.config.js"></script> -->
+      
+      <!-- <script src="../demo.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/signup.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/968b881c46.js" crossorigin="anonymous"></script>
+    <title>Food-Ordering</title>
+    
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg  fixed-top">
+        <div class="container-sm">
+            <div class="logo">
+                <img src="../assets/pngtree-healthy-food-logo-designs-png-image_878260.png" height="50px" width="50px" class="inline-block logo-img">
+            </div>
+            <a class="navbar-brand" href="food.html">
+                <h5>FOOD ORDER</h5>
+            </a>
+            <button class="navbar-toggler bg-primary" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggle-icon "></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="food.html" class="hover-underline-animation">
+                            <i class="fa-solid fa-user"></i>
+                            Login
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="login">
+
+        <h1 class="text-center">Welcome!!</h1>
+
+        <form method="post" class=" data border-primary " id="signup-form">
+            <div class="form-group">
+                <label class="form-label" for="name"><i class="fa-solid fa-user"></i></i> Username</label>
+                <input class="form-control" type="name" id="name">
+
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="email"><i class="fa-solid fa-envelope"></i></i> Email</label>
+                <input class="form-control" type="email" id="email">
+
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="password"><i class="fa-solid fa-lock"></i> Password</label>
+                <input class="form-control" type="password" id="password">
+
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="number"><i class="fa-solid fa-lock"></i> Number</label>
+                <input class="form-control" type="number" id="number">
+
+            </div>
+            <div class="button">
+                <button class="btn  w-100" type="submit" id="btn">Register</button>
+            </div>
+            <div class="login-form">
+                <p>Already Registered?<a href="../html/login.html" class="hover-underline-animation" style="text-decoration:none;"> Log in</a></p>
+            </div>
+            
+
+        </form>
+        <div class="success-message" id="success-message">
+            <!-- <i class="fas fa-check-circle"></i>
+            <p>User added successfully!</p> -->
+          </div>
+    </div>
+    <!-- <footer>
+        <div id="message" style="display:none;"></div>
+    </footer> -->
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script> -->
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script type="module" src="./signup.js"></script>
+</body>
+</html>

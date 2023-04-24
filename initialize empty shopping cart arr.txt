@@ -1,0 +1,116 @@
+// initialize empty shopping cart array
+var cart = [];
+
+// function to add an item to the cart
+function addToCart(item) {
+    // check if item already exists in cart
+    var found = false;
+    for (var i = 0; i < cart.length; i++) {
+        if (cart[i].name === item.name) {
+            cart[i].quantity++;
+            found = true;
+            break;
+        }
+    }
+    // if item not found, add new item to cart
+    if (!found) {
+        cart.push({
+            name: item.name,
+            price: item.price,
+            quantity: 1,
+            image: item.image
+        });
+    }
+    // update cart display
+}
+
+// function to remove an item from the cart
+function removeFromCart(item) {
+    // find item in cart
+    for (var i = 0; i < cart.length; i++) {
+        if (cart[i].name === item.name) {
+            // if item quantity > 1, decrement quantity
+            if (cart[i].quantity > 1) {
+                cart[i].quantity--;
+            } else {
+                // otherwise, remove item from cart
+                cart.splice(i, 1);
+            }
+            break;
+        }
+    }
+    // update cart display
+    updateCartDisplay();
+}
+
+// function to update the cart display
+function updateCartDisplay() {
+    var cartDisplay = document.getElementById('cart-display');
+    var totalDisplay = document.getElementById('total-display');
+    // clear previous cart display
+    cartDisplay.innerHTML = '';
+    // calculate total cost and display it
+    var total = 0;
+    for (var i = 0; i < cart.length; i++) {
+        var item = cart[i];
+        var itemCost = item.price * item.quantity;
+        total += itemCost;
+        // create HTML for item display
+        var itemDisplay = document.createElement('div');
+        itemDisplay.innerHTML = item.quantity + ' x ' + item.name + `: ₹` + itemCost.toFixed(2);
+        // create image element and set its src attribute
+        var itemImage = document.createElement('img');
+        itemImage.src = item.image;
+        itemDisplay.appendChild(itemImage);
+        // create button to remove
+	  var removeButton = document.createElement('button');
+        removeButton.innerHTML = 'Remove';
+        removeButton.onclick = (function (item) {
+            return function () {
+                removeFromCart(item);
+            };
+        })(item);
+
+        // add item display, image and remove button to cart display
+        itemDisplay.appendChild(itemImage);
+        itemDisplay.appendChild(removeButton);
+        cartDisplay.appendChild(itemDisplay);
+    }
+    totalDisplay.innerHTML = 'Total: ₹' + total.toFixed(0);
+}
+var item1 = {
+    name: 'Biriyani',
+    price: 55,
+    image: '../assets/biriyani.jpg'
+};
+
+var item2 = {
+    name: 'Fried Rice ',
+    price: 50,
+    image: '../assets/fried rice.jpeg'
+};
+
+var item3 = {
+    name: 'Noodles',
+    price: 50,
+    image: '../assets/noodles.jpg'
+};
+
+var item4 = {
+    name: 'Chilli chicken',
+    price: 70,
+    image: '../assets/chilli-chicken.jpg'
+};
+
+var item5 = {
+    name: 'Pasta',
+    price: 60,
+    image: '../assets/pexels-photo-1438672.jpeg'
+};
+
+// addToCart(item1);
+// addToCart(item2);
+// addToCart(item3);
+// addToCart(item4);
+// addToCart(item5);
+

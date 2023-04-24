@@ -1,0 +1,57 @@
+#include<stdio.h>
+int count(int n)
+{
+    int count=0;
+    while(n!=0)
+    {
+        count++;
+        n=n/10;
+    }
+    return count;
+}
+int power(int p,int b)
+{
+    int k=1;
+    for(int i=0;i<b;i++)
+    {
+        k=k*p;
+    }
+    return k;
+}
+void find(int a[],int n)
+{
+    int b[n];
+    int l=0;
+    for(int i=0;i<n;i++)
+    {
+        int c=count(a[i]);
+        int div=power(10,count)
+        int res=a[i]/div;
+        b[l]=res;
+        l++;
+    }
+    int min=0;
+    min=b[0]
+    for(int j=0;j<l;j++)
+    {
+        if(b[j]<min)
+        {
+            min=b[j];
+        }
+        if(b[j]==min)
+        {
+            
+        }
+    }
+}
+int main() {
+    int n;
+    scanf("%d",&n);
+    int a[n];
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",a[i]);
+    }
+    find(a,n);
+    
+}

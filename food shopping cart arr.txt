@@ -1,0 +1,171 @@
+// initialize empty shopping cart array
+var cart = [];
+
+// function to add an item to the cart
+function addToCart(item) {
+  // check if item already exists in cart
+  var found = false;
+  for (var i = 0; i < cart.length; i++) {
+    if (cart[i].name === item.name) {
+      cart[i].quantity++;
+      found = true;
+      break;
+    }
+  }
+  // if item not found, add new item to cart
+  if (!found) {
+    cart.push({
+      name: item.name,
+      price: item.price,
+      quantity: 1
+    });
+  }
+  // update cart display
+  updateCartDisplay();
+}
+
+// function to remove an item from the cart
+function removeFromCart(item) {
+  // find item in cart
+  for (var i = 0; i < cart.length; i++) {
+    if (cart[i].name === item.name) {
+      // if item quantity > 1, decrement quantity
+      if (cart[i].quantity > 1) {
+        cart[i].quantity--;
+      } else {
+        // otherwise, remove item from cart
+        cart.splice(i, 1);
+      }
+      break;
+    }
+  }
+  // update cart display
+  updateCartDisplay();
+}
+
+// function to update the cart display
+function updateCartDisplay() {
+  var cartDisplay = document.getElementById('cart-display');
+  var totalDisplay = document.getElementById('total-display');
+  // clear previous cart display
+  cartDisplay.innerHTML = '';
+  // calculate total cost and display it
+  var total = 0;
+  for (var i = 0; i < cart.length; i++) {
+    var item = cart[i];
+    var itemCost = item.price * item.quantity;
+    total += itemCost;
+    // create HTML for item display
+    var itemDisplay = document.createElement('div');
+    itemDisplay.innerHTML = item.quantity + ' x ' + item.name + ': $' + itemCost.toFixed(2);
+    // create button to remove item from cart
+    var removeButton = document.createElement('button');
+    removeButton.innerHTML = 'Remove';
+    removeButton.onclick = (function(item) {
+      return function() {
+        removeFromCart(item);
+      };
+    })(item);
+    // add item display and remove button to cart display
+    itemDisplay.appendChild(removeButton);
+    cartDisplay.appendChild(itemDisplay);
+  }
+  totalDisplay.innerHTML = 'Total: $' + total.toFixed(2);
+}
+
+// example usage
+var item1 = {
+  name: 'Hamburger',
+  price: 5.99
+};
+var item2 = {
+  name: 'French fries',
+  price: 2.99
+};
+addToCart(item1);
+addToCart(item1);
+addToCart(item2);
+(JAVASCRIPT)
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Canteen Food Pre-ordering System</title>
+</head>
+<body>
+  <h1>Canteen Food Pre-ordering System</h1>
+  <h2>Menu</h2>
+  <ul>
+    <li>
+      <h3>Hamburger - $5.99</h3>
+      <button onclick="addToCart('Hamburger', 5.99)">Add to Cart</button>
+    </li>
+    <li>
+      <h3>French fries - $2.99</h3>
+      <button onclick="addToCart('French fries', 2.99)">Add to Cart</button>
+    </li>
+    <!-- add more menu items here -->
+  </ul>
+  <h2>Cart</h2>
+  <div id="cart-display"></div>
+  <div id="total-display"></div>
+  <script src="cart.js"></script>
+</body>
+</html>
+(HTML)
+
+
+
+/* Style the heading */
+h1 {
+  text-align: center;
+  font-size: 2em;
+}
+
+/* Style the menu items */
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1em 0;
+}
+
+h3 {
+  margin: 0;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 0.5em 1em;
+  border: none;
+  border-radius: 0.25em;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+/* Style the cart display */
+#cart-display {
+  margin: 1em 0;
+}
+
+#cart-display > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5em 0;
+}
+
+#cart-display > div > button {
+  background-color: #f44336;
+}
+
+/* Style the total display */
+#total-display {
+  margin-top: 1em;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+(CSS)

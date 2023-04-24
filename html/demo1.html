@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="../demo1.css">
+  <title>Canteen Food Pre-ordering System</title>
+</head>
+<body>
+    <h1>Food-Ordering Cart</h1>
+    <div>
+      <h2>Menu</h2>
+      <ul>
+        <li>
+          <h3>Biriyani - ₹55</h3>
+          <button onclick="addtoCart(item1)">Order</button>
+        </li>
+        <li>
+          <h3>Fried Rice - ₹50</h3>
+          <button onclick="addtoCart(item2)">Order</button>
+        </li>
+        <li>
+          <h3>Noodles - ₹50</h3>
+          <button onclick="addtoCart(item3)">Order</button>
+        </li>
+        <li>
+          <h3>Chilli chicken - ₹70</h3>
+          <button onclick="addtoCart(item4)">Order</button>
+        </li>
+        <li>
+          <h3>Pasta - ₹60</h3>
+          <button onclick="addtoCart(item5)">Order</button>
+        </li>
+        <li>
+          <h3>Meals - ₹45</h3>
+          <button onclick="addtoCart(item6)">Order</button>
+        </li>
+        <li>
+          <h3>Chicken Fried Rice - ₹60</h3>
+          <button onclick="addtoCart(item7)">Order</button>
+        </li>
+        <li>
+          <h3>Chicken Noodles - ₹60</h3>
+          <button onclick="addtoCart(item8)">Order</button>
+        </li>
+        <li>
+          <h3>Chicken Gravy - ₹70</h3>
+          <button onclick="addtoCart(item9)">Order</button>
+        </li>
+        <li>
+          <h3>Coconut Rice - ₹40</h3>
+          <button onclick="addtoCart(item10)">Order</button>
+        </li>
+      </ul>
+    </div>
+    <div>
+      <h2>Cart</h2>
+      <div id="cart-display"></div>
+      <div id="total-display"></div>
+    </div>
+    <a href="payment.html"><button id="PAY">PAY AMOUNT</button></a>
+    
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="./firebase.js">
+      
+      // Your web app's Firebase configuration
+      // const firebaseConfig = {
+      //   apiKey: "AIzaSyAYDB9l-uuuIFDItv0UXe-F1TJrlEj1OUI",
+      //   authDomain: "foodordering-41768.firebaseapp.com",
+      //   databaseURL: "https://foodordering-41768-default-rtdb.asia-southeast1.firebasedatabase.app",
+      //   projectId: "foodordering-41768",
+      //   storageBucket: "foodordering-41768.appspot.com",
+      //   messagingSenderId: "813600747716",
+      //   appId: "1:813600747716:web:7c79cd8bd346d60e3e5991"
+      // };
+      
+      // // Initialize Firebase
+      // firebase.initializeApp(firebaseConfig);
+      // const database = firebase.database();
+      </script>
+      <script src="../demo1.js"></script>
+      <!-- <script src="./payment.js"></script> -->
+  
+    <!-- <script>
+        addToCart(item1);
+        addToCart(item2);
+        addToCart(item3);
+        addToCart(item4);
+        addToCart(item5);
+    </script> -->
+</body>
+</html>

@@ -1,0 +1,57 @@
+body {
+    background:url("../assets/4426510.jpg");
+    background-size: cover;
+    background-position: 1rem;
+    background-attachment: fixed;
+    overflow-y: hidden;
+    font-family: Arial, sans-serif;
+  }
+  
+  form {
+    width: 300px;
+    margin: 11rem auto;
+    padding: 30px;
+    padding-bottom:4.5rem;
+    background-color: rgba(255, 253, 253, 0.42);
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #ccc;
+    border-color:black;
+
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 0px 5px #ccc;
+  }
+  
+  input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background:linear-gradient(to right,rgb(220, 143, 0),rgb(65, 64, 63));
+    margin-top:2rem;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
+  

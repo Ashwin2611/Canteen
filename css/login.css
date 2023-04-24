@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image:url("/assets/pexels-mariana-kurnyk-1775043.jpg");
+    background-size: cover;
+    
+}
+.navbar{
+    object-fit: fill;
+}
+.navbar-nav a{
+    color:black;
+    font-size: 20px;
+    margin-bottom: 2px;
+    font-weight: bold;
+}
+.logo-img{
+    margin-top: -2px;
+    margin-right: 10px;
+}
+.navbar-brand h5 {
+    cursor: default;
+    font-weight: bold;
+    margin-top:5px;
+    /* margin-left:10px ; */
+    color:black;
+    
+}
+.nav-item i{
+    margin-right:10px;
+    align-items: center;
+    justify-content:center ;
+}
+.login {
+    width: 360px;
+    height: min-content;
+    padding: 20px;
+    border-radius: 12px;
+    background: rgb(0, 0, 0,0.23);
+    
+}
+.text-center{
+    color:bisque;
+}
+.wel{
+    color: lavender;
+}
+.login h1 {
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+
+.login form {
+    font-size: 20px;
+}
+
+.login form .form-group {
+    margin-bottom: 12px;
+}
+
+.login form input[type="submit"] {
+    font-size: 20px;
+    margin-top: 15px;
+}
+/* .logo-img{
+    
+} */

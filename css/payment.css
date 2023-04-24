@@ -1,0 +1,72 @@
+.creditCardForm {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .creditCardForm .heading {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .creditCardForm .payment {
+    margin-top: 30px;
+  }
+  
+  .creditCardForm label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .creditCardForm input[type="text"],
+  .creditCardForm select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+  }
+  
+  .creditCardForm input[type="radio"] {
+    margin-right: 10px;
+  }
+  
+  #card-details {
+    margin-top: 30px;
+  }
+  
+  #card-details label {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  #credit_cards {
+    margin-top: 20px;
+  }
+  
+  #credit_cards img {
+    height: 30px;
+    margin-right: 10px;
+  }
+  
+  #pay-now {
+    text-align: center;
+  }
+  
+  #confirm-purchase {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  #total-amount  {
+    font-size:20px;
+  }

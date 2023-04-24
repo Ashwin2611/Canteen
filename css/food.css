@@ -1,0 +1,213 @@
+:root{
+    --mainColor:#f6f8fa;
+    --darkBlack:#2d2f31;
+    --darkGrey:#61666b;
+    --grey:#d5d5d5;
+    --lightGrey:#f2f2f2;
+    --yellow:#fecb40;
+    --red:#df113c;
+}
+
+* {
+    margin:0;
+    padding:0;
+    outline:none;
+    box-sizing: border-box;
+    font-family: "Noto Sans JP",sans-serif;
+}
+
+body{
+    width: 100%;
+    height: auto;
+    color:var(--darkBlack)
+}
+
+.p{
+    font-size: 14px;
+
+}
+
+.label-cart{
+    position:fixed;
+    top:15;
+    right:10;
+    z-index:4;
+    cursor:pointer;
+
+}
+.logo{
+    position:fixed;
+    background-color:#4b4e4e;
+    height:60px;
+    color:var(--lightGrey);
+    width: 100%;
+    text-align:center;
+    padding:15px 420px 15px 60px;
+    top:0;
+    z-index:2;
+
+}
+.logo .firsttext{
+    /* border: solid 1px red; */
+    margin-left: 320px;
+
+}
+.menu{
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 100%;
+    background-color: var(--mainColor);
+    z-index: 1;
+    padding-top: 70px;
+}
+.sidebar-menu{
+    width:100%;
+    text-align: center;
+    /* padding:10px 5px; */
+    color:var(--darkGrey);
+}
+
+.sidebar-menu > a{
+    text-decoration: none;
+    font-size:0.7rem;
+    line-height: 1.5;
+    color:var(--darkGrey);
+}
+
+.sidebar-menu:hover{
+    border-right:2px solid var(--yellow);
+    color:var(--yellow);
+    
+}
+.img{
+    align-items: center;
+    margin-top: 80px;
+    margin-left:400px;
+    height:400px;
+    width: 700px;
+    border:1px solid red;
+    border-color: #2d2f31;
+    border-radius: 20px;
+    
+    
+}
+.banner-promo > h1{
+    margin-left: 100px;
+    color:red; 
+    border: 1px solid yellow;
+}
+/* .dashboard{
+    background:linear-gradient(to right,#283048,#859398);
+    height: 35rem;
+} */
+.dashboard{
+    background:linear-gradient(to right,#283048,#859398);
+    height: 35rem;
+    padding-top:10rem;
+}
+.dashimg{
+    margin-left:45rem;
+    width: 35rem;
+    /* padding-bottom:20rem */
+    position: relative;
+    bottom: 15rem;
+    border-radius: 10px;
+}
+h1.quote-txt{
+    margin: 7rem 0rem 0rem 10rem;
+
+    height:5rem;
+    width:30rem;
+    color:#859398;
+    
+}
+span{
+    color:rgb(72, 180, 238);
+}
+/* .sidebar-menu:hove
+r > a{
+    color:var(--yellow);
+} */
+
+/* .menu{
+    margin-top:10px;
+    float:right;
+    border:1px blue solid;
+}  */
+/* .card{
+    margin-top:50px;
+    margin-left: 100px;
+} */
+
+/* .btnn{
+    padding-left: 35%;
+} */
+/* .card-img-top{
+    width: 206px !important;
+    height: 150px;
+} */
+/* .card-body{
+    width: 200px !important;
+    height: 120px; 
+} */
+/* .btnn{
+    margin-bottom: 20px;
+} */
+.fooditem-1{
+    display:flex;
+    justify-content:space-between;
+    width:50%;
+    height: 30%;
+}
+.cart-sect{
+    margin-left: 80rem;
+    margin-bottom:30px;
+}
+#cartbtn{
+    background-color:transparent;
+    text-decoration: none;
+    color:rgb(196, 190, 190);
+    position:relative;
+    font-size: 20px;
+    bottom:4rem;
+    padding:0px 20px 0px 10px;
+}
+#cart-logo{
+    color:white;
+    text-decoration: none;
+    position:relative;
+    bottom:38px;
+    right:1rem;
+}
+#c{
+    color:#df113c;
+    margin-left:10px;
+    padding:auto;
+}
+.search-icon {
+    position: relative;
+    top:10px;
+    /* padding-bottom: 15px; */
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+  
+.search-bar {
+    display: none;
+    position: relative;
+    /* top: 50%; */
+    right: 50px;
+    bottom:43px;
+    transform: translateX(50%);
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+#search-results{
+    margin-left:5rem;
+}
+
+  
